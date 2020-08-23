@@ -18,9 +18,11 @@ shinyUI(fluidPage(
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
-            selectInput("countryChoice",
+            selectInput(inputId = "countryChoice",
                         label = "select country",
-                        c("China", "US", "United Kingdom", "Italy", "Spain", "Poland"))
+                        choices = c("China", "US", "United Kingdom", 
+                                    "Italy", "Spain", "Poland"),
+                        selected = "Poland")
         ),
 
         # Show a plot of the generated distribution
